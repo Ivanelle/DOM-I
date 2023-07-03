@@ -52,7 +52,7 @@ middleImg.src = siteContent.images['accent-img']
 //FOOTERLINK
 const footerLink = document.querySelector('footer a')
 footerLink.textContent = siteContent.footer.copyright
-footerLink.classList.add = 'bold'
+footerLink.classList.add("bold")
 
 //CONTACT
 const contact = document.querySelector('section.contact')
@@ -78,5 +78,15 @@ bottomContent.children[2].children[0].textContent = siteContent['main-content'][
 bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content']
 
 //cta
-// document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
-// document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+
+//NAV LINKS
+const navLinks = document.querySelectorAll('header nav a')
+const navLinksTexts = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) =>{
+  link.textContent = navLinksTexts[idx]
+  link.classList.add('italic')
+})
+
+
